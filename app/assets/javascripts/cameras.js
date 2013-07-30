@@ -33,10 +33,9 @@ function initialize() {
 
       //create an event to happen on clicking a marker
       google.maps.event.addListener(marker, 'click', function() {
-        // this next line is for scoping purposes for line 47.
-        var self = this
+
         //write a content string for the marker we are currently iterating...
-        var contentString = '<div id="content"><img src="http://www.tfl.gov.uk/tfl/livetravelnews/trafficcams/cctv/' + marker.file + '"><p>' + marker.location + ", " + marker.postcode + '</p></div>';
+        var contentString = '<div id="content"><img src="http://www.tfl.gov.uk/tfl/livetravelnews/trafficcams/cctv/' + this.file + '"><p>' + this.location + ", " + this.postcode + '</p></div>';
 
         //... and use this string to create a new content window for this marker
         var infowindow = new google.maps.InfoWindow({
@@ -44,7 +43,7 @@ function initialize() {
         });
 
         //finally, define what happens when we click the marker
-        infowindow.open(map, self)
+        infowindow.open(map, this)
 
       });  //closes the goolge maps listener event
     } // closes the for loop

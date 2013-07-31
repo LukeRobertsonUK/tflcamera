@@ -20,7 +20,6 @@ function initialize() {
     //loop through my cameras array creating a marker for each one.
     for(var i =0; i < cameras.length; i++){
 
-      //each marker needs to have a unique id so we can match it to the info window later
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(parseFloat(cameras[i].lat), parseFloat(cameras[i].lng)),
         map: map,

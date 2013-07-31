@@ -24,7 +24,6 @@ function initialize() {
         position: new google.maps.LatLng(parseFloat(cameras[i].lat), parseFloat(cameras[i].lng)),
         map: map,
         title: 'placeholder',
-        camera_id: i,
         location: cameras[i].location,
         postcode: cameras[i].postcode,
         file: cameras[i].file

@@ -29,7 +29,7 @@ function initialize() {
         file: cameras[i].file
       })
 
-      //create an event to happen on clicking a marker
+      //create an event to happen on clicking each marker
       google.maps.event.addListener(marker, 'click', function() {
 
         //write a content string for the marker we are currently iterating...
@@ -46,6 +46,6 @@ function initialize() {
       });  //closes the goolge maps listener event
     } // closes the for loop
   }) //closes the getJSON
-} //closes document ready
+} //closes initialize function
 
 google.maps.event.addDomListener(window, 'load', initialize);
